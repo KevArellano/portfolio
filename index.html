@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Architect | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">kevin</h1>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#projects">work</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+                <div class="theme-switcher">
+                    <button class="theme-btn" data-theme="light" aria-label="Light mode" title="Light mode">☀️</button>
+                    <button class="theme-btn" data-theme="dark" aria-label="Dark mode" title="Dark mode">🌙</button>
+                    <button class="theme-btn" data-theme="terminal" aria-label="Terminal mode" title="Terminal mode">⌨️</button>
+                </div>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">hey, i'm <span class="highlight">kevin</span></h1>
+            <p class="hero-subtitle">infrastructure engineer who builds things that scale (and occasionally break in interesting ways)</p>
+            <p class="hero-tagline">FedRAMP-High • AWS GovCloud • Zero Trust • 7+ years making backends behave</p>
+            <a href="#projects" class="btn">see what i've built</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">about me</h2>
+            <p class="about-text">
+                i'm an infrastructure engineer who loves turning messy legacy systems into clean, scalable architectures. 
+                spent the last 7+ years modernizing distributed systems, wrangling compliance (FedRAMP-High, HIPAA, PCI DSS), 
+                and building cloud-native infrastructure that actually works. currently working in AWS GovCloud on defense-critical 
+                systems, which is as serious as it sounds but also surprisingly fun.
+                <br><br>
+                i believe in writing code that's maintainable, systems that are observable, and documentation that doesn't make 
+                people cry. also a big fan of rust, terrible puns, and reducing deployment times from hours to minutes.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">things i work with</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Languages</h3>
+                    <p>Rust, Go, TypeScript, Deno, Python, Kotlin, C#</p>
+                </div>
+                <div class="skill-item">
+                    <h3>AWS</h3>
+                    <p>GovCloud, Lambda, S3, Kinesis, Glue, SageMaker, DynamoDB, Terraform, Terragrunt</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Google Cloud</h3>
+                    <p>Cloud Run, GCE, Pub/Sub, Kubernetes</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Observability</h3>
+                    <p>Prometheus, Grafana, ELK Stack, Structured Logging, Distributed Tracing</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Compliance</h3>
+                    <p>FedRAMP-High, PCI DSS, HIPAA, Zero Trust Architecture</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Architecture</h3>
+                    <p>Microservices, Serverless, IaC, CI/CD, GraphQL, Incident Response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">stuff i've built</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>govcloud infrastructure</h3>
+                    <p>multi-account AWS GovCloud setup with FedRAMP-High compliance. automated governance, cost optimization, and Zero Trust identity systems for defense workloads</p>
+                    <a href="#" class="project-link">learn more →</a>
+                </div>
+                <div class="project-card">
+                    <h3>the 94% faster pipeline</h3>
+                    <p>rewrote a daily data pipeline in Rust that went from 14+ hours to 45 minutes. concurrent processing + streaming ingestion = happy data team</p>
+                    <a href="#" class="project-link">learn more →</a>
+                </div>
+                <div class="project-card">
+                    <h3>monolith → microservices</h3>
+                    <p>transformed a struggling GraphQL monolith into serverless microservices on GCP Cloud Run. fixed scaling bottlenecks and made deploys actually work</p>
+                    <a href="#" class="project-link">learn more →</a>
+                </div>
+                <div class="project-card">
+                    <h3>hipaa-compliant ml pipeline</h3>
+                    <p>built biometric data ingestion on AWS (S3, Kinesis, Glue, SageMaker) handling hundreds of events/sec while keeping lawyers happy</p>
+                    <a href="#" class="project-link">learn more →</a>
+                </div>
+                <div class="project-card">
+                    <h3>observability that works</h3>
+                    <p>centralized monitoring with Prometheus & Grafana. structured logging, distributed tracing, and dashboards that actually help debug things</p>
+                    <a href="#" class="project-link">learn more →</a>
+                </div>
+                <div class="project-card">
+                    <h3>24 hours → 60 minutes</h3>
+                    <p>modernized a legacy fulfillment platform from monolith to modular system. deployments went from a full day to under an hour</p>
+                    <a href="#" class="project-link">learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">let's chat</h2>
+            <div class="contact-info">
+                <div class="contact-item">Email: <a href="mailto:kevarellano@proton.me">kevarellano@proton.me</a></div>
+                <div class="contact-item">GitHub: <a href="https://github.com/kevarellano" target="_blank">github.com/kevarellano</a></div>
+                <div class="contact-item">LinkedIn: <a href="https://linkedin.com/in/kevarellano" target="_blank">linkedin.com/in/kevarellano</a></div>
+                <div class="contact-item">Location: Atlanta, GA</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>built with html, css, and a reasonable amount of <span class="drink-icon">🍵</span> <span class="drink-name">tea</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
