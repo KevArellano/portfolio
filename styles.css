@@ -200,6 +200,14 @@ body {
     border: 1px solid var(--border);
 }
 
+.theme-switcher-mobile {
+    display: none;
+}
+
+.mobile-theme-switcher {
+    display: none;
+}
+
 .theme-btn {
     background: transparent;
     border: none;
@@ -549,6 +557,29 @@ body {
         display: flex;
     }
 
+    /* Hide desktop theme switcher on mobile */
+    .theme-switcher-desktop {
+        display: none;
+    }
+
+    /* Show mobile theme switcher inside menu */
+    .mobile-theme-switcher {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .theme-switcher-mobile {
+        display: flex;
+        gap: 0.5rem;
+        background: var(--bg-secondary);
+        padding: 4px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        justify-content: center;
+    }
+
     .nav-links {
         position: fixed;
         top: 70px;
@@ -585,16 +616,6 @@ body {
 
     .nav-right {
         gap: 1rem;
-    }
-
-    .theme-switcher {
-        padding: 3px;
-    }
-
-    .theme-btn {
-        width: 34px;
-        height: 34px;
-        font-size: 1rem;
     }
     
     .hero {
