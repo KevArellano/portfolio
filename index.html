@@ -3,27 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Backend Architect | Portfolio</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Kevin Arellano | Backend Architect & Infrastructure Engineer</title>
+    <meta name="title" content="Kevin Arellano | Backend Architect & Infrastructure Engineer">
+    <meta name="description" content="Infrastructure engineer specializing in AWS GovCloud, FedRAMP-High compliance, and scalable backend systems. 7+ years building cloud-native infrastructure with Rust, Go, and TypeScript.">
+    <meta name="keywords" content="backend engineer, infrastructure engineer, AWS GovCloud, FedRAMP, cloud architect, Rust developer, DevOps, microservices, Kevin Arellano">
+    <meta name="author" content="Kevin Arellano">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kevarellano.com/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevarellano.com/">
+    <meta property="og:title" content="Kevin Arellano | Backend Architect & Infrastructure Engineer">
+    <meta property="og:description" content="Infrastructure engineer specializing in AWS GovCloud, FedRAMP-High compliance, and scalable backend systems. 7+ years building cloud-native infrastructure.">
+    <meta property="og:image" content="https://kevarellano.com/og-image.jpg">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kevarellano.com/">
+    <meta property="twitter:title" content="Kevin Arellano | Backend Architect & Infrastructure Engineer">
+    <meta property="twitter:description" content="Infrastructure engineer specializing in AWS GovCloud, FedRAMP-High compliance, and scalable backend systems.">
+    <meta property="twitter:image" content="https://kevarellano.com/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0969da">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Kevin Arellano">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kevin Arellano",
+      "url": "https://kevarellano.com",
+      "jobTitle": "Backend Architect & Infrastructure Engineer",
+      "description": "Infrastructure engineer specializing in AWS GovCloud, FedRAMP-High compliance, and scalable backend systems",
+      "email": "kevarellano@proton.me",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Atlanta",
+        "addressRegion": "GA",
+        "addressCountry": "US"
+      },
+      "sameAs": [
+        "https://github.com/kevarellano",
+        "https://linkedin.com/in/kevarellano"
+      ],
+      "knowsAbout": [
+        "AWS GovCloud",
+        "FedRAMP-High",
+        "Infrastructure Engineering",
+        "Rust",
+        "Go",
+        "TypeScript",
+        "Cloud Architecture",
+        "Microservices",
+        "DevOps",
+        "Zero Trust Architecture"
+      ]
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <h1 class="logo">kevin</h1>
+            <a href="#home" class="logo" aria-label="Kevin Arellano - Home">
+                <h1>kevin</h1>
+            </a>
             <div class="nav-right">
-                <ul class="nav-links">
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#skills">skills</a></li>
-                    <li><a href="#projects">work</a></li>
-                    <li><a href="#contact">contact</a></li>
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem">home</a></li>
+                    <li role="none"><a href="#about" role="menuitem">about</a></li>
+                    <li role="none"><a href="#skills" role="menuitem">skills</a></li>
+                    <li role="none"><a href="#projects" role="menuitem">work</a></li>
+                    <li role="none"><a href="#contact" role="menuitem">contact</a></li>
                 </ul>
-                <div class="theme-switcher">
-                    <button class="theme-btn" data-theme="light" aria-label="Light mode" title="Light mode">☀️</button>
-                    <button class="theme-btn" data-theme="dark" aria-label="Dark mode" title="Dark mode">🌙</button>
-                    <button class="theme-btn" data-theme="terminal" aria-label="Terminal mode" title="Terminal mode">⌨️</button>
+                <div class="theme-switcher" role="group" aria-label="Theme selection">
+                    <button class="theme-btn" data-theme="light" aria-label="Switch to light mode" title="Light mode">☀️</button>
+                    <button class="theme-btn" data-theme="dark" aria-label="Switch to dark mode" title="Dark mode">🌙</button>
+                    <button class="theme-btn" data-theme="terminal" aria-label="Switch to terminal mode" title="Terminal mode">⌨️</button>
                 </div>
-                <button class="hamburger" aria-label="Toggle menu">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -32,115 +107,130 @@
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container">
+    <header id="home" class="hero" role="banner">
+        <div class="container" id="main-content">
             <h1 class="hero-title">hey, i'm <span class="highlight">kevin</span></h1>
             <p class="hero-subtitle">infrastructure engineer who builds things that scale (and occasionally break in interesting ways)</p>
             <p class="hero-tagline">FedRAMP-High • AWS GovCloud • Zero Trust • 7+ years making backends behave</p>
-            <a href="#projects" class="btn">see what i've built</a>
+            <a href="#projects" class="btn" aria-label="View my projects">see what i've built</a>
+        </div>
+    </header>
+
+    <section id="about" class="about" aria-labelledby="about-heading">
+        <div class="container">
+            <h2 id="about-heading" class="section-title">about me</h2>
+            <div class="about-text">
+                <p>
+                    i'm an infrastructure engineer who loves turning messy legacy systems into clean, scalable architectures. 
+                    spent the last 7+ years modernizing distributed systems, wrangling compliance (FedRAMP-High, HIPAA, PCI DSS), 
+                    and building cloud-native infrastructure that actually works. currently working in AWS GovCloud on defense-critical 
+                    systems, which is as serious as it sounds but also surprisingly fun.
+                </p>
+                <p>
+                    i believe in writing code that's maintainable, systems that are observable, and documentation that doesn't make 
+                    people cry. also a big fan of rust, terrible puns, and reducing deployment times from hours to minutes.
+                </p>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="about">
+    <section id="skills" class="skills" aria-labelledby="skills-heading">
         <div class="container">
-            <h2 class="section-title">about me</h2>
-            <p class="about-text">
-                i'm an infrastructure engineer who loves turning messy legacy systems into clean, scalable architectures. 
-                spent the last 7+ years modernizing distributed systems, wrangling compliance (FedRAMP-High, HIPAA, PCI DSS), 
-                and building cloud-native infrastructure that actually works. currently working in AWS GovCloud on defense-critical 
-                systems, which is as serious as it sounds but also surprisingly fun.
-                <br><br>
-                i believe in writing code that's maintainable, systems that are observable, and documentation that doesn't make 
-                people cry. also a big fan of rust, terrible puns, and reducing deployment times from hours to minutes.
-            </p>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">things i work with</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
+            <h2 id="skills-heading" class="section-title">things i work with</h2>
+            <div class="skills-grid" role="list">
+                <article class="skill-item" role="listitem">
                     <h3>Languages</h3>
                     <p>Rust, Go, TypeScript, Deno, Python, Kotlin, C#</p>
-                </div>
-                <div class="skill-item">
+                </article>
+                <article class="skill-item" role="listitem">
                     <h3>AWS</h3>
                     <p>GovCloud, Lambda, S3, Kinesis, Glue, SageMaker, DynamoDB, Terraform, Terragrunt</p>
-                </div>
-                <div class="skill-item">
+                </article>
+                <article class="skill-item" role="listitem">
                     <h3>Google Cloud</h3>
                     <p>Cloud Run, GCE, Pub/Sub, Kubernetes</p>
-                </div>
-                <div class="skill-item">
+                </article>
+                <article class="skill-item" role="listitem">
                     <h3>Observability</h3>
                     <p>Prometheus, Grafana, ELK Stack, Structured Logging, Distributed Tracing</p>
-                </div>
-                <div class="skill-item">
+                </article>
+                <article class="skill-item" role="listitem">
                     <h3>Compliance</h3>
                     <p>FedRAMP-High, PCI DSS, HIPAA, Zero Trust Architecture</p>
-                </div>
-                <div class="skill-item">
+                </article>
+                <article class="skill-item" role="listitem">
                     <h3>Architecture</h3>
                     <p>Microservices, Serverless, IaC, CI/CD, GraphQL, Incident Response</p>
-                </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <section id="projects" class="projects" aria-labelledby="projects-heading">
         <div class="container">
-            <h2 class="section-title">stuff i've built</h2>
-            <div class="project-grid">
-                <div class="project-card">
+            <h2 id="projects-heading" class="section-title">stuff i've built</h2>
+            <div class="project-grid" role="list">
+                <article class="project-card" role="listitem">
                     <h3>govcloud infrastructure</h3>
                     <p>multi-account AWS GovCloud setup with FedRAMP-High compliance. automated governance, cost optimization, and Zero Trust identity systems for defense workloads</p>
-                    <a href="#" class="project-link">learn more →</a>
-                </div>
-                <div class="project-card">
+                    <a href="#contact" class="project-link" aria-label="Contact me about GovCloud infrastructure project">learn more →</a>
+                </article>
+                <article class="project-card" role="listitem">
                     <h3>the 94% faster pipeline</h3>
                     <p>rewrote a daily data pipeline in Rust that went from 14+ hours to 45 minutes. concurrent processing + streaming ingestion = happy data team</p>
-                    <a href="#" class="project-link">learn more →</a>
-                </div>
-                <div class="project-card">
+                    <a href="#contact" class="project-link" aria-label="Contact me about Rust pipeline optimization project">learn more →</a>
+                </article>
+                <article class="project-card" role="listitem">
                     <h3>monolith → microservices</h3>
                     <p>transformed a struggling GraphQL monolith into serverless microservices on GCP Cloud Run. fixed scaling bottlenecks and made deploys actually work</p>
-                    <a href="#" class="project-link">learn more →</a>
-                </div>
-                <div class="project-card">
+                    <a href="#contact" class="project-link" aria-label="Contact me about microservices migration project">learn more →</a>
+                </article>
+                <article class="project-card" role="listitem">
                     <h3>hipaa-compliant ml pipeline</h3>
                     <p>built biometric data ingestion on AWS (S3, Kinesis, Glue, SageMaker) handling hundreds of events/sec while keeping lawyers happy</p>
-                    <a href="#" class="project-link">learn more →</a>
-                </div>
-                <div class="project-card">
+                    <a href="#contact" class="project-link" aria-label="Contact me about HIPAA-compliant ML pipeline project">learn more →</a>
+                </article>
+                <article class="project-card" role="listitem">
                     <h3>observability that works</h3>
                     <p>centralized monitoring with Prometheus & Grafana. structured logging, distributed tracing, and dashboards that actually help debug things</p>
-                    <a href="#" class="project-link">learn more →</a>
-                </div>
-                <div class="project-card">
+                    <a href="#contact" class="project-link" aria-label="Contact me about observability implementation project">learn more →</a>
+                </article>
+                <article class="project-card" role="listitem">
                     <h3>24 hours → 60 minutes</h3>
                     <p>modernized a legacy fulfillment platform from monolith to modular system. deployments went from a full day to under an hour</p>
-                    <a href="#" class="project-link">learn more →</a>
+                    <a href="#contact" class="project-link" aria-label="Contact me about platform modernization project">learn more →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-heading">
+        <div class="container">
+            <h2 id="contact-heading" class="section-title">let's chat</h2>
+            <address class="contact-info">
+                <div class="contact-item">
+                    <span aria-label="Email">Email:</span> 
+                    <a href="mailto:kevarellano@proton.me" aria-label="Send email to Kevin Arellano">kevarellano@proton.me</a>
                 </div>
-            </div>
+                <div class="contact-item">
+                    <span aria-label="GitHub profile">GitHub:</span> 
+                    <a href="https://github.com/kevarellano" target="_blank" rel="noopener noreferrer" aria-label="Visit Kevin Arellano's GitHub profile (opens in new tab)">github.com/kevarellano</a>
+                </div>
+                <div class="contact-item">
+                    <span aria-label="LinkedIn profile">LinkedIn:</span> 
+                    <a href="https://linkedin.com/in/kevarellano" target="_blank" rel="noopener noreferrer" aria-label="Visit Kevin Arellano's LinkedIn profile (opens in new tab)">linkedin.com/in/kevarellano</a>
+                </div>
+                <div class="contact-item">
+                    <span aria-label="Location">Location:</span> Atlanta, GA
+                </div>
+            </address>
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <h2 class="section-title">let's chat</h2>
-            <div class="contact-info">
-                <div class="contact-item">Email: <a href="mailto:kevarellano@proton.me">kevarellano@proton.me</a></div>
-                <div class="contact-item">GitHub: <a href="https://github.com/kevarellano" target="_blank">github.com/kevarellano</a></div>
-                <div class="contact-item">LinkedIn: <a href="https://linkedin.com/in/kevarellano" target="_blank">linkedin.com/in/kevarellano</a></div>
-                <div class="contact-item">Location: Atlanta, GA</div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <p>built with html, css, and a reasonable amount of <span class="drink-icon">🍵</span> <span class="drink-name">tea</span></p>
+            <p>built with html, css, and a reasonable amount of <span class="drink-icon" role="img" aria-label="tea">🍵</span> <span class="drink-name">tea</span></p>
+            <p><small>&copy; 2026 Kevin Arellano. All rights reserved.</small></p>
         </div>
     </footer>
 

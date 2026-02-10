@@ -11,6 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             // Close mobile menu after clicking
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
+            hamburger.setAttribute('aria-expanded', 'false');
         }
     });
 });
@@ -39,20 +40,25 @@ function setTheme(theme) {
     // Update drink icon and name based on theme
     if (theme === 'light') {
         drinkIcon.textContent = '🍵';
+        drinkIcon.setAttribute('aria-label', 'tea');
         drinkName.textContent = 'tea';
     } else if (theme === 'dark') {
         drinkIcon.textContent = '☕';
+        drinkIcon.setAttribute('aria-label', 'coffee');
         drinkName.textContent = 'coffee';
     } else if (theme === 'terminal') {
         drinkIcon.textContent = '🧃';
+        drinkIcon.setAttribute('aria-label', 'monster energy drink');
         drinkName.textContent = 'monster energy drink';
     }
     
     // Update active button
     themeButtons.forEach(btn => {
         btn.classList.remove('active');
+        btn.setAttribute('aria-pressed', 'false');
         if (btn.dataset.theme === theme) {
             btn.classList.add('active');
+            btn.setAttribute('aria-pressed', 'true');
         }
     });
     
@@ -71,8 +77,9 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
+    const isActive = hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isActive);
 });
 
 // Close menu when clicking outside
@@ -80,5 +87,15 @@ document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+    }
+});
+
+// Keyboard navigation for menu
+hamburger.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && hamburger.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
     }
 });
