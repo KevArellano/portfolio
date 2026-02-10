@@ -94,10 +94,6 @@ body {
     color: var(--text-primary);
     background: var(--bg-primary);
     transition: background 0.3s ease, color 0.3s ease;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeSpeed;
-    contain: layout style paint;
 }
 
 .container {
@@ -327,8 +323,6 @@ body {
 .about {
     padding: 100px 0;
     background: var(--bg-secondary);
-    content-visibility: auto;
-    contain-intrinsic-size: auto 500px;
 }
 
 .section-title {
@@ -362,8 +356,6 @@ body {
 .skills {
     padding: 100px 0;
     background: var(--bg-primary);
-    content-visibility: auto;
-    contain-intrinsic-size: auto 800px;
 }
 
 .skills-grid {
@@ -371,7 +363,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 2.5rem;
-    contain: layout;
 }
 
 .skill-item {
@@ -424,8 +415,6 @@ body {
 .projects {
     padding: 100px 0;
     background: var(--bg-secondary);
-    content-visibility: auto;
-    contain-intrinsic-size: auto 1200px;
 }
 
 .project-grid {
@@ -433,7 +422,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 2.5rem;
-    contain: layout;
 }
 
 .project-card {
@@ -504,8 +492,6 @@ body {
 .contact {
     padding: 100px 0;
     background: var(--bg-primary);
-    content-visibility: auto;
-    contain-intrinsic-size: auto 400px;
 }
 
 .contact-info {
@@ -541,8 +527,6 @@ body {
     padding: 2.5rem 0;
     border-top: 1px solid var(--border);
     font-size: 0.95rem;
-    content-visibility: auto;
-    contain-intrinsic-size: auto 200px;
 }
 
 /* Responsive */
