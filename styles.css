@@ -28,8 +28,8 @@
     --bg-secondary: #f6f8fa;
     --bg-tertiary: #ffffff;
     --text-primary: #24292f;
-    --text-secondary: #57606a;
-    --text-tertiary: #6e7781;
+    --text-secondary: #24292f;
+    --text-tertiary: #24292f;
     --accent: #0969da;
     --accent-hover: #0550ae;
     --accent-light: rgba(9, 105, 218, 0.1);
@@ -44,11 +44,11 @@ body.dark-mode {
     --bg-secondary: #161b22;
     --bg-tertiary: #0d1117;
     --text-primary: #e6edf3;
-    --text-secondary: #8d96a0;
-    --text-tertiary: #7d8590;
-    --accent: #2f81f7;
-    --accent-hover: #539bf5;
-    --accent-light: rgba(47, 129, 247, 0.1);
+    --text-secondary: #c9d1d9;
+    --text-tertiary: #c9d1d9;
+    --accent: #58a6ff;
+    --accent-hover: #79c0ff;
+    --accent-light: rgba(88, 166, 255, 0.1);
     --border: #30363d;
     --shadow: rgba(1, 4, 9, 0.4);
     --shadow-lg: rgba(1, 4, 9, 0.6);
@@ -113,8 +113,9 @@ body {
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 1px 3px var(--shadow);
+    will-change: transform;
 }
 
 .navbar .container {
@@ -150,7 +151,7 @@ body {
 .nav-links a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: all 0.2s;
+    transition: color 0.2s, opacity 0.2s;
     position: relative;
     font-weight: 500;
     font-size: 0.95rem;
@@ -165,6 +166,7 @@ body {
     height: 2px;
     background: var(--accent);
     transition: width 0.3s ease;
+    will-change: width;
 }
 
 .nav-links a:hover {
@@ -194,9 +196,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s;
+    transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
     font-size: 1.1rem;
     opacity: 0.6;
+    will-change: transform;
 }
 
 .theme-btn:hover {
@@ -208,7 +211,7 @@ body {
 .theme-btn.active {
     background: var(--accent-light);
     opacity: 1;
-    border: 1px solid var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
 }
 
 /* Hamburger Menu */
@@ -302,11 +305,12 @@ body {
     padding: 14px 32px;
     text-decoration: none;
     border-radius: 8px;
-    transition: all 0.3s;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
     box-shadow: 0 4px 14px var(--shadow);
+    will-change: transform;
 }
 
 .btn:hover {
@@ -366,9 +370,10 @@ body {
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--border);
-    transition: all 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
 .skill-item::before {
@@ -424,8 +429,9 @@ body {
     padding: 2rem;
     border-radius: 12px;
     border: 1px solid var(--border);
-    transition: all 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
+    will-change: transform;
 }
 
 .project-card::after {
@@ -437,6 +443,7 @@ body {
     background: linear-gradient(135deg, var(--accent), transparent);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.3s;
@@ -469,7 +476,7 @@ body {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.2s;
+    transition: color 0.2s;
     font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
@@ -503,7 +510,7 @@ body {
 .contact-item a {
     color: var(--accent);
     text-decoration: none;
-    transition: all 0.2s;
+    transition: color 0.2s;
     font-weight: 600;
 }
 

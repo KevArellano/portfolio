@@ -38,8 +38,22 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Kevin Arellano">
     
-    <!-- Preconnect for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    
+    <!-- Critical CSS for above-the-fold content -->
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--bg-primary:#fff;--bg-secondary:#f6f8fa;--text-primary:#24292f;--text-secondary:#24292f;--accent:#0969da;--border:#d0d7de;--shadow:rgba(31,35,40,0.12)}
+        body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;line-height:1.6;color:var(--text-primary);background:var(--bg-primary)}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .navbar{background:var(--bg-primary);border-bottom:1px solid var(--border);padding:1rem 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 1px 3px var(--shadow)}
+        .hero{background:var(--bg-primary);padding:180px 0 120px;margin-top:60px}
+        .hero-title{font-size:3rem;margin-bottom:1rem;font-weight:800;color:var(--text-primary)}
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#fff;padding:8px 16px;text-decoration:none;z-index:100;border-radius:0 0 4px 0;font-weight:600}
+        .skip-link:focus{top:0}
+    </style>
     
     <link rel="stylesheet" href="styles.css">
     
@@ -107,8 +121,9 @@
         </div>
     </nav>
 
-    <header id="home" class="hero" role="banner">
-        <div class="container" id="main-content">
+    <main id="main-content">
+        <header id="home" class="hero" role="banner">
+        <div class="container">
             <h1 class="hero-title">hey, i'm <span class="highlight">kevin</span></h1>
             <p class="hero-subtitle">infrastructure engineer who builds things that scale (and occasionally break in interesting ways)</p>
             <p class="hero-tagline">FedRAMP-High • AWS GovCloud • Zero Trust • 7+ years making backends behave</p>
@@ -226,6 +241,7 @@
             </address>
         </div>
     </section>
+    </main>
 
     <footer class="footer" role="contentinfo">
         <div class="container">
@@ -234,6 +250,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
