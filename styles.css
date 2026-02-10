@@ -74,7 +74,7 @@ body.terminal-mode {
     font-family: 'Courier New', 'Consolas', monospace;
 }
 
-body.terminal-mode .logo::before {
+body.terminal-mode .logo h1::before {
     content: '$ ';
 }
 
