@@ -200,12 +200,16 @@ body {
     border: 1px solid var(--border);
 }
 
+/* Hide mobile theme switcher on desktop */
 .theme-switcher-mobile {
     display: none;
 }
 
 .mobile-theme-switcher {
     display: none;
+    width: 100%;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
 }
 
 .theme-btn {
@@ -565,9 +569,6 @@ body {
     /* Show mobile theme switcher inside menu */
     .mobile-theme-switcher {
         display: block;
-        width: 100%;
-        padding: 1rem 0;
-        border-bottom: 1px solid var(--border);
     }
 
     .theme-switcher-mobile {
