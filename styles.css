@@ -460,6 +460,12 @@ body {
     will-change: transform;
 }
 
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .project-card::after {
     content: '';
     position: absolute;
@@ -473,6 +479,7 @@ body {
     mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.3s;
+    pointer-events: none;
 }
 
 .project-card:hover::after {
@@ -482,6 +489,7 @@ body {
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px var(--shadow);
+    cursor: pointer;
 }
 
 .project-card h3 {
@@ -502,15 +510,16 @@ body {
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s;
+    transition: color 0.2s, gap 0.2s;
     font-size: 0.95rem;
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    position: relative;
+    z-index: 1;
 }
 
-.project-link:hover {
-    color: var(--accent-hover);
+.project-card:hover .project-link {
     gap: 8px;
 }
 
